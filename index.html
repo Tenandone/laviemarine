@@ -1,0 +1,918 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>라비마린 | 대구 스쿠버다이빙 교육센터</title>
+  <meta name="description" content="라비마린 대구 스쿠버다이빙 교육센터. 체험다이빙 문의, 오픈워터 안내, 이미지 중심 포스트형 랜딩페이지입니다." />
+  <meta name="keywords" content="라비마린, 대구 스쿠버다이빙 교육센터, 체험다이빙, 오픈워터, 스쿠버다이빙 문의" />
+  <meta name="theme-color" content="#050608" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="라비마린 | 대구 스쿠버다이빙 교육센터" />
+  <meta property="og:description" content="체험다이빙 문의, 오픈워터 안내를 포스트 형식으로 편하게 볼 수 있는 라비마린 페이지" />
+  <meta property="og:image" content="https://raviemarine.com/img/lavimarine-cover.png" />
+  <meta property="og:locale" content="ko_KR" />
+
+  <link rel="canonical" href="https://raviemarine.com/" />
+<meta property="og:url" content="https://raviemarine.com/" />
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="shortcut icon" href="/favicon.ico">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <style>
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    :root {
+      --page-bg: #050608;
+      --card-bg: #11151b;
+      --card-bg-2: #0d131b;
+      --text-main: #f3f7fb;
+      --text-sub: #a9b4c3;
+      --line: rgba(255, 255, 255, 0.08);
+      --blue: #2d8cff;
+      --sky: #63d7ff;
+      --radius: 28px;
+      --shadow: 0 24px 50px rgba(0, 0, 0, 0.42);
+      --content-width: 760px;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Pretendard", "Noto Sans KR", Arial, sans-serif;
+      color: var(--text-main);
+      background:
+        linear-gradient(rgba(5, 6, 8, 0.72), rgba(5, 6, 8, 0.88)),
+        url("img/black-pearl-bg.png") center top / cover no-repeat fixed,
+        #050608;
+      line-height: 1.6;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background:
+        linear-gradient(115deg, rgba(255,255,255,0.018) 0%, rgba(255,255,255,0) 30%),
+        radial-gradient(circle at 15% 20%, rgba(255,255,255,0.035), transparent 18%),
+        radial-gradient(circle at 82% 14%, rgba(255,255,255,0.02), transparent 16%);
+      z-index: -1;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    .container {
+      width: min(var(--content-width), calc(100% - 24px));
+      margin: 0 auto;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(8, 10, 14, 0.82);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .header-inner {
+      min-height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .brand img {
+      width: 44px;
+      height: 44px;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
+
+    .brand-text {
+      min-width: 0;
+    }
+
+    .brand-text strong {
+      display: block;
+      font-size: 22px;
+      line-height: 1.05;
+      color: #ffffff;
+      letter-spacing: -0.04em;
+      font-weight: 900;
+    }
+
+    .brand-text span {
+      display: block;
+      margin-top: 4px;
+      font-size: 12px;
+      color: #9fb0c4;
+      font-weight: 700;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+
+    .icon-cta {
+      width: 46px;
+      height: 46px;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 10px 24px rgba(0,0,0,0.28);
+      transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .icon-cta:hover {
+      transform: translateY(-2px);
+      background: rgba(255,255,255,0.1);
+      box-shadow: 0 14px 28px rgba(0,0,0,0.34);
+    }
+
+    .icon-cta svg {
+      width: 22px;
+      height: 22px;
+      stroke: #ffffff;
+      fill: none;
+      stroke-width: 2.1;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .feed {
+      padding: 18px 0 44px;
+    }
+
+    .post-card {
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.008)),
+        var(--card-bg);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .post-card + .post-card {
+      margin-top: 18px;
+    }
+
+    .post-head {
+      padding: 18px 18px 0;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .post-head-logo {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      object-fit: cover;
+      background: transparent;
+      flex-shrink: 0;
+    }
+
+    .post-head-text {
+      min-width: 0;
+    }
+
+    .post-head-text strong {
+      display: block;
+      font-size: 16px;
+      font-weight: 900;
+      color: #ffffff;
+      letter-spacing: -0.02em;
+    }
+
+    .post-head-text span {
+      display: block;
+      margin-top: 2px;
+      font-size: 12px;
+      color: #8da1b8;
+      font-weight: 600;
+    }
+
+    .post-body {
+      padding: 16px 18px 18px;
+      text-align: left;
+    }
+
+    .post-body h1,
+    .post-body h2 {
+      margin: 0;
+      color: #ffffff;
+      letter-spacing: -0.04em;
+      font-weight: 900;
+    }
+
+    .post-body h1 {
+      max-width: 680px;
+      font-size: clamp(28px, 5vw, 46px);
+      line-height: 1.16;
+      word-break: keep-all;
+    }
+
+    .post-body h2 {
+      font-size: clamp(24px, 5vw, 34px);
+      line-height: 1.18;
+      word-break: keep-all;
+    }
+
+    .post-body p {
+      margin: 12px 0 0;
+      font-size: 15px;
+      color: var(--text-sub);
+      word-break: keep-all;
+    }
+
+    .post-cover {
+      aspect-ratio: 1080 / 1350;
+      background: #0d1117 center center / cover no-repeat;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .cover-main { background-image: url("img/lavimarine-cover.png"); }
+    .cover-1 { background-image: url("img/section-01.png"); }
+    .cover-2 { background-image: url("img/section-02.png"); }
+    .cover-3 { background-image: url("img/section-03.png"); }
+    .cover-4 { background-image: url("img/section-04.png"); }
+    .cover-5 { background-image: url("img/section-05.png"); }
+
+    .post-footer {
+      padding: 14px 18px 18px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 34px;
+      padding: 0 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.04);
+      color: #b8c7d8;
+      font-size: 12px;
+      font-weight: 800;
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .action-row {
+      padding: 0 18px 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      min-height: 52px;
+      border-radius: 999px;
+      font-size: 15px;
+      font-weight: 800;
+      text-align: center;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+      background: linear-gradient(135deg, #050505 0%, #161616 48%, #2a2a2a 100%);
+      color: #ffffff;
+      border: 1px solid rgba(255,255,255,0.12);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45);
+    }
+
+    .btn-primary:hover,
+    .floating-sns-nav a:hover {
+      transform: translateY(-2px);
+    }
+
+    .location-line {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 14px;
+      color: #c6d3e0;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .location-line svg {
+      width: 16px;
+      height: 16px;
+      stroke: #63d7ff;
+      fill: none;
+      stroke-width: 2.2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      flex-shrink: 0;
+    }
+
+    .floating-sns-nav {
+      position: fixed;
+      right: 18px;
+      bottom: 110px;
+      z-index: 9999;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .floating-sns-nav a {
+      width: 58px;
+      height: 58px;
+      border-radius: 999px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255,255,255,0.06);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.28);
+      text-decoration: none;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+
+    .floating-sns-nav a:hover {
+      background: rgba(255,255,255,0.1);
+      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.36);
+    }
+
+    .floating-sns-nav svg {
+      width: 26px;
+      height: 26px;
+      stroke: #ffffff;
+      fill: none;
+      stroke-width: 2.2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .card-banner-wrap {
+      margin-top: 18px;
+      padding: 24px 18px 30px;
+      border-radius: 28px;
+      border: 1px solid rgba(255,255,255,0.08);
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)),
+        rgba(10, 15, 23, 0.82);
+      box-shadow: 0 24px 60px rgba(0,0,0,0.30);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .card-banner-wrap::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 15% 20%, rgba(99,215,255,0.06), transparent 25%),
+        radial-gradient(circle at 80% 70%, rgba(45,140,255,0.08), transparent 28%);
+      pointer-events: none;
+    }
+
+    .card-stage {
+      position: relative;
+      z-index: 2;
+      perspective: 1600px;
+      height: 290px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: visible;
+    }
+
+    .card-ring {
+      position: relative;
+      width: 100%;
+      max-width: 720px;
+      height: 240px;
+      transform-style: preserve-3d;
+    }
+
+    .biz-card {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: min(84vw, 390px);
+      aspect-ratio: 1.75 / 1;
+      transform-style: preserve-3d;
+      backface-visibility: hidden;
+      cursor: pointer;
+      user-select: none;
+      border-radius: 22px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.14);
+      box-shadow: 0 18px 40px rgba(0,0,0,0.34);
+      transition:
+        transform 0.72s cubic-bezier(.2,.8,.2,1),
+        opacity 0.72s ease,
+        filter 0.72s ease,
+        box-shadow 0.72s ease;
+      background: #0d1117;
+    }
+
+    .biz-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      pointer-events: none;
+    }
+
+    .card-dots {
+      position: relative;
+      z-index: 2;
+      margin-top: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .card-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.22);
+      border: 0;
+      padding: 0;
+      cursor: pointer;
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+
+    .card-dot.is-active {
+      background: #63d7ff;
+      transform: scale(1.2);
+      box-shadow: 0 0 16px rgba(99,215,255,0.58);
+    }
+
+    .footer {
+      margin-top: 18px;
+      padding: 26px 0 40px;
+      text-align: center;
+      color: #95a8bb;
+      font-size: 13px;
+      font-weight: 600;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.008)),
+        rgba(8, 11, 17, 0.78);
+      border-top: 1px solid rgba(255,255,255,0.08);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+
+    .footer-logos {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+      flex-wrap: wrap;
+      margin-bottom: 14px;
+      background: transparent;
+    }
+
+    .footer-logos img {
+      height: 38px;
+      width: auto;
+      object-fit: contain;
+      opacity: 0.96;
+      filter: drop-shadow(0 4px 16px rgba(0,0,0,0.22));
+      background: transparent;
+    }
+
+    .footer-text-top {
+      color: #d7e2ed;
+      font-size: 14px;
+      font-weight: 800;
+      margin-bottom: 6px;
+    }
+
+    .footer-text-sub {
+      color: #8ea2b5;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .logo-transparent {
+      background: transparent !important;
+      mix-blend-mode: screen;
+      filter:
+        brightness(1.28)
+        contrast(1.08)
+        drop-shadow(0 4px 12px rgba(0, 0, 0, 0.18));
+    }
+
+    @media (max-width: 768px) {
+      .header-inner {
+        min-height: 66px;
+      }
+
+      .brand {
+        gap: 10px;
+      }
+
+      .brand img {
+        width: 40px;
+        height: 40px;
+      }
+
+      .brand-text strong {
+        font-size: 18px;
+      }
+
+      .brand-text span {
+        font-size: 11px;
+      }
+
+      .icon-cta {
+        width: 42px;
+        height: 42px;
+      }
+
+      .icon-cta svg {
+        width: 20px;
+        height: 20px;
+      }
+
+      .post-head,
+      .post-body,
+      .post-footer,
+      .action-row,
+      .card-banner-wrap {
+        padding-left: 14px;
+        padding-right: 14px;
+      }
+
+      .post-card {
+        border-radius: 22px;
+      }
+
+      .post-body h1 {
+        max-width: 100%;
+        font-size: clamp(22px, 7vw, 32px);
+        line-height: 1.24;
+        letter-spacing: -0.05em;
+      }
+
+      .post-body p {
+        font-size: 14px;
+        line-height: 1.65;
+      }
+
+      .floating-sns-nav {
+        right: 14px;
+        bottom: 95px;
+        gap: 10px;
+      }
+
+      .floating-sns-nav a {
+        width: 54px;
+        height: 54px;
+      }
+
+      .floating-sns-nav svg {
+        width: 24px;
+        height: 24px;
+      }
+
+      .footer-logos img {
+        height: 32px;
+      }
+
+      .card-stage {
+        height: 250px;
+      }
+
+      .card-ring {
+        height: 210px;
+      }
+
+      .biz-card {
+        width: min(88vw, 320px);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="top"></div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="img/lavimarine-title.png" alt="라비마린 로고" class="logo-transparent" />
+        <div class="brand-text">
+          <strong>LAVIMARINE</strong>
+          <span>대구 스쿠버다이빙 교육센터</span>
+        </div>
+      </div>
+
+      <div class="header-actions">
+        <a href="#contact" class="icon-cta" aria-label="문의하기" title="문의하기">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4.5 12a7.5 7.5 0 0 1 15 0"></path>
+            <path d="M6.5 12.5v3a2 2 0 0 0 2 2H10v-5H8.5a2 2 0 0 0-2 2z"></path>
+            <path d="M17.5 12.5v3a2 2 0 0 1-2 2H14v-5h1.5a2 2 0 0 1 2 2z"></path>
+            <path d="M12 17.5v1"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="feed">
+    <div class="container">
+
+      <article class="post-card">
+        <div class="post-head">
+          <img class="post-head-logo logo-transparent" src="img/lavimarine-title.png" alt="라비마린 로고" />
+          <div class="post-head-text">
+            <strong>라비마린</strong>
+            <span>대구 스쿠버다이빙 교육센터</span>
+          </div>
+        </div>
+
+        <div class="post-body">
+          <h1>스쿠버다이빙의 첫 시작, 라비마린에서</h1>
+          <p>
+            체험다이빙부터 오픈워터 안내까지,
+            대구에서 편하게 시작할 수 있는 스쿠버다이빙 교육센터 라비마린입니다.
+          </p>
+
+          <a
+            class="location-line"
+            href="https://map.naver.com/p/entry/place/2029737317?placePath=/home?entry=plt&from=map&fromPanelNum=1&additionalHeight=76&timestamp=202604161635&locale=ko&svcName=map_pcv5&searchType=place&lng=128.5401397&lat=35.8460357&c=15.00,0,0,0,dh"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="네이버 지도에서 위치 보기"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 21s6-5.5 6-11a6 6 0 1 0-12 0c0 5.5 6 11 6 11z"></path>
+              <circle cx="12" cy="10" r="2.5"></circle>
+            </svg>
+            위치 보기
+          </a>
+        </div>
+
+        <div class="post-cover cover-main"></div>
+
+        <div class="post-footer">
+          <span class="chip">체험다이빙</span>
+          <span class="chip">오픈워터</span>
+          <span class="chip">대구 스쿠버다이빙</span>
+        </div>
+      </article>
+
+      <article class="post-card">
+        <div class="post-cover cover-1"></div>
+      </article>
+
+      <article class="post-card">
+        <div class="post-cover cover-2"></div>
+      </article>
+
+      <article class="post-card">
+        <div class="post-cover cover-3"></div>
+      </article>
+
+      <article class="post-card">
+        <div class="post-cover cover-4"></div>
+      </article>
+
+      <article class="post-card">
+        <div class="post-cover cover-5"></div>
+      </article>
+
+      <article class="post-card" id="contact">
+        <div class="post-head">
+          <img class="post-head-logo logo-transparent" src="img/lavimarine-title.png" alt="라비마린 로고" />
+          <div class="post-head-text">
+            <strong>라비마린</strong>
+            <span>체험다이빙 안내</span>
+          </div>
+        </div>
+
+        <div class="post-body">
+          <h2>체험다이빙 문의하기</h2>
+          <p>
+            처음 체험하시는 분,
+            준비물이나 진행 방식이 궁금하신 분 모두 편하게 문의주세요.
+          </p>
+        </div>
+
+        <div class="action-row">
+          <a href="https://open.kakao.com/o/gZ9izFqi" target="_blank" rel="noopener noreferrer" class="btn-primary">체험다이빙 문의하기</a>
+        </div>
+      </article>
+
+      <section class="card-banner-wrap" aria-label="라비마린 명함 배너">
+        <div class="card-stage">
+          <div class="card-ring" id="cardRing">
+            <article class="biz-card" data-index="0" role="button" tabindex="0" aria-label="첫 번째 명함">
+              <img src="img/card-01.png" alt="라비마린 첫 번째 명함" />
+            </article>
+
+            <article class="biz-card" data-index="1" role="button" tabindex="0" aria-label="두 번째 명함">
+              <img src="img/card-02.png" alt="라비마린 두 번째 명함" />
+            </article>
+
+            <article class="biz-card" data-index="2" role="button" tabindex="0" aria-label="세 번째 명함">
+              <img src="img/card-03.png" alt="라비마린 세 번째 명함" />
+            </article>
+          </div>
+        </div>
+
+        <div class="card-dots" aria-label="명함 선택">
+          <button type="button" class="card-dot is-active" data-index="0" aria-label="첫 번째 명함"></button>
+          <button type="button" class="card-dot" data-index="1" aria-label="두 번째 명함"></button>
+          <button type="button" class="card-dot" data-index="2" aria-label="세 번째 명함"></button>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <div class="floating-sns-nav">
+    <a href="#top" aria-label="맨 위로 이동" title="홈">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M3 11.5L12 4l9 7.5"></path>
+        <path d="M6.5 10.5V20h11V10.5"></path>
+      </svg>
+    </a>
+
+    <a href="https://cafe.naver.com/daegudiving/" target="_blank" rel="noopener noreferrer" aria-label="네이버 카페" title="카페">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M7 9.5h10"></path>
+        <path d="M7 13h10"></path>
+        <path d="M7 16.5h6"></path>
+        <path d="M6 4.5h9l3 3V19a1.5 1.5 0 0 1-1.5 1.5h-10A1.5 1.5 0 0 1 5 19V6A1.5 1.5 0 0 1 6.5 4.5z"></path>
+      </svg>
+    </a>
+
+    <a href="https://www.instagram.com/lavie.marine_daegu/" target="_blank" rel="noopener noreferrer" aria-label="인스타그램" title="인스타">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <rect x="4.5" y="4.5" width="15" height="15" rx="4"></rect>
+        <circle cx="12" cy="12" r="3.6"></circle>
+        <circle cx="17.2" cy="6.8" r="0.9" fill="#ffffff" stroke="none"></circle>
+      </svg>
+    </a>
+
+    <a
+      href="https://map.naver.com/p/entry/place/2029737317?placePath=/home?entry=plt&from=map&fromPanelNum=1&additionalHeight=76&timestamp=202604161635&locale=ko&svcName=map_pcv5&searchType=place&lng=128.5401397&lat=35.8460357&c=15.00,0,0,0,dh"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="위치"
+      title="위치"
+    >
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 21s6-5.5 6-11a6 6 0 1 0-12 0c0 5.5 6 11 6 11z"></path>
+        <circle cx="12" cy="10" r="2.5"></circle>
+      </svg>
+    </a>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-logos">
+        <img src="img/pss-logo.png" alt="PSS 로고" class="logo-transparent" />
+      </div>
+      <div class="footer-text-top">LAVIMARINE</div>
+      <div class="footer-text-sub">Daegu Scuba Diving Training Center</div>
+    </div>
+  </footer>
+
+  <script>
+    const cards = Array.from(document.querySelectorAll('.biz-card'));
+    const dots = Array.from(document.querySelectorAll('.card-dot'));
+    const totalCards = cards.length;
+
+    let activeIndex = 0;
+    let autoRotate = null;
+
+    function normalizeIndex(index) {
+      return (index + totalCards) % totalCards;
+    }
+
+    function renderCards() {
+      cards.forEach((card, i) => {
+        const offset = (i - activeIndex + totalCards) % totalCards;
+
+        let x = 0;
+        let z = 0;
+        let rotateY = 0;
+        let scale = 1;
+        let opacity = 1;
+        let blur = 0;
+        let zIndex = 1;
+
+        if (offset === 0) {
+          x = 0;
+          z = 140;
+          rotateY = 0;
+          scale = 1;
+          opacity = 1;
+          blur = 0;
+          zIndex = 3;
+        } else if (offset === 1) {
+          x = 220;
+          z = -90;
+          rotateY = -30;
+          scale = 0.88;
+          opacity = 0.72;
+          blur = 0.2;
+          zIndex = 2;
+        } else {
+          x = -220;
+          z = -90;
+          rotateY = 30;
+          scale = 0.88;
+          opacity = 0.72;
+          blur = 0.2;
+          zIndex = 2;
+        }
+
+        card.style.transform = `
+          translate3d(calc(-50% + ${x}px), -50%, ${z}px)
+          rotateY(${rotateY}deg)
+          scale(${scale})
+        `;
+        card.style.opacity = opacity;
+        card.style.filter = `blur(${blur}px) saturate(${offset === 0 ? 1.04 : 0.9})`;
+        card.style.zIndex = zIndex;
+      });
+
+      dots.forEach((dot, i) => {
+        dot.classList.toggle('is-active', i === activeIndex);
+      });
+    }
+
+    function goToCard(index) {
+      activeIndex = normalizeIndex(index);
+      renderCards();
+      restartAutoRotate();
+    }
+
+    function nextCard() {
+      activeIndex = normalizeIndex(activeIndex + 1);
+      renderCards();
+    }
+
+    function restartAutoRotate() {
+      clearInterval(autoRotate);
+      autoRotate = setInterval(nextCard, 1500);
+    }
+
+    cards.forEach((card, index) => {
+      card.addEventListener('click', () => goToCard(index));
+      card.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          goToCard(index);
+        }
+      });
+    });
+
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => goToCard(index));
+    });
+
+    renderCards();
+    restartAutoRotate();
+  </script>
+
+</body>
+</html>
